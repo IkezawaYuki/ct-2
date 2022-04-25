@@ -21,5 +21,20 @@ namespace TrackerUI
         {
 
         }
+
+        private void roundLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teamOneScoreVaue1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
