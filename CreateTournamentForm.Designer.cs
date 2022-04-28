@@ -1,6 +1,6 @@
 ﻿namespace TrackerUI
 {
-    partial class selectTeamLabel
+    partial class createTournamentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,11 @@
         {
             this.headerLabel = new System.Windows.Forms.Label();
             this.tournamentNameValue = new System.Windows.Forms.Label();
-            this.teamOneScore = new System.Windows.Forms.Label();
+            this.tournamentNameLabel = new System.Windows.Forms.Label();
             this.teamOneScoreVaue = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.selectTeamDropdown = new System.Windows.Forms.ComboBox();
-            this.roundLabel = new System.Windows.Forms.Label();
+            this.selectTeamLabel = new System.Windows.Forms.Label();
             this.createNewTeamLink = new System.Windows.Forms.LinkLabel();
             this.addTeamButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -68,16 +68,16 @@
             this.tournamentNameValue.Text = "       ";
             this.tournamentNameValue.Click += new System.EventHandler(this.tournamentNameValue_Click);
             // 
-            // teamOneScore
+            // tournamentNameLabel
             // 
-            this.teamOneScore.AutoSize = true;
-            this.teamOneScore.ForeColor = System.Drawing.Color.SteelBlue;
-            this.teamOneScore.Location = new System.Drawing.Point(55, 93);
-            this.teamOneScore.Name = "teamOneScore";
-            this.teamOneScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.teamOneScore.Size = new System.Drawing.Size(239, 38);
-            this.teamOneScore.TabIndex = 10;
-            this.teamOneScore.Text = "TournamentName";
+            this.tournamentNameLabel.AutoSize = true;
+            this.tournamentNameLabel.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tournamentNameLabel.Location = new System.Drawing.Point(55, 93);
+            this.tournamentNameLabel.Name = "tournamentNameLabel";
+            this.tournamentNameLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tournamentNameLabel.Size = new System.Drawing.Size(239, 38);
+            this.tournamentNameLabel.TabIndex = 10;
+            this.tournamentNameLabel.Text = "TournamentName";
             // 
             // teamOneScoreVaue
             // 
@@ -110,15 +110,16 @@
             this.selectTeamDropdown.TabIndex = 15;
             this.selectTeamDropdown.SelectedIndexChanged += new System.EventHandler(this.roundDropDown_SelectedIndexChanged);
             // 
-            // roundLabel
+            // selectTeamLabel
             // 
-            this.roundLabel.AutoSize = true;
-            this.roundLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.roundLabel.Location = new System.Drawing.Point(55, 248);
-            this.roundLabel.Name = "roundLabel";
-            this.roundLabel.Size = new System.Drawing.Size(164, 38);
-            this.roundLabel.TabIndex = 14;
-            this.roundLabel.Text = "Select Team";
+            this.selectTeamLabel.AutoSize = true;
+            this.selectTeamLabel.ForeColor = System.Drawing.Color.SteelBlue;
+            this.selectTeamLabel.Location = new System.Drawing.Point(55, 248);
+            this.selectTeamLabel.Name = "selectTeamLabel";
+            this.selectTeamLabel.Size = new System.Drawing.Size(164, 38);
+            this.selectTeamLabel.TabIndex = 14;
+            this.selectTeamLabel.Text = "Select Team";
+            this.selectTeamLabel.Click += new System.EventHandler(this.roundLabel_Click);
             // 
             // createNewTeamLink
             // 
@@ -249,7 +250,7 @@
             this.createTournamentButton.UseVisualStyleBackColor = true;
             this.createTournamentButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // selectTeamLabel
+            // createTournamentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,15 +267,15 @@
             this.Controls.Add(this.addTeamButton);
             this.Controls.Add(this.createNewTeamLink);
             this.Controls.Add(this.selectTeamDropdown);
-            this.Controls.Add(this.roundLabel);
+            this.Controls.Add(this.selectTeamLabel);
             this.Controls.Add(this.teamOneScoreVaue);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tournamentNameValue);
-            this.Controls.Add(this.teamOneScore);
+            this.Controls.Add(this.tournamentNameLabel);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "selectTeamLabel";
+            this.Name = "createTournamentForm";
             this.Text = "CreateTournament";
             this.Load += new System.EventHandler(this.CreateTournamentForm_Load);
             this.ResumeLayout(false);
@@ -286,11 +287,11 @@
 
         private Label headerLabel;
         private Label tournamentNameValue;
-        private Label teamOneScore;
+        private Label tournamentNameLabel;
         private Label teamOneScoreVaue;
         private Label label1;
         private ComboBox selectTeamDropdown;
-        private Label roundLabel;
+        private Label selectTeamLabel;
         private LinkLabel createNewTeamLink;
         private Button addTeamButton;
         private Button button1;

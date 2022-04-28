@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TrackerUI
 {
-    public partial class selectTeamLabel : Form
+    public partial class createTournamentForm : Form
     {
-        public selectTeamLabel()
+        public createTournamentForm()
         {
             InitializeComponent();
         }
@@ -43,6 +43,11 @@ namespace TrackerUI
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundLabel_Click(object sender, EventArgs e)
         {
 
         }
