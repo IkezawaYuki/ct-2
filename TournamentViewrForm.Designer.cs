@@ -1,6 +1,6 @@
 ﻿namespace TrackerUI
 {
-    partial class TournamentViewrForm
+    partial class TournamentViewerForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -36,12 +36,12 @@
             this.teamOneName = new System.Windows.Forms.Label();
             this.matchupListBox = new System.Windows.Forms.ListBox();
             this.teamOneScore = new System.Windows.Forms.Label();
-            this.teamOneScoreVaue = new System.Windows.Forms.Label();
-            this.teamTwoScoreValue = new System.Windows.Forms.Label();
             this.teamTwoNameScore = new System.Windows.Forms.Label();
             this.teamTwoName = new System.Windows.Forms.Label();
             this.versus = new System.Windows.Forms.Label();
             this.scoreButton = new System.Windows.Forms.Button();
+            this.teamOneScoreVaue = new System.Windows.Forms.TextBox();
+            this.teamTwoScoreValue = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -124,29 +124,6 @@
             this.teamOneScore.TabIndex = 7;
             this.teamOneScore.Text = "Score";
             // 
-            // teamOneScoreVaue
-            // 
-            this.teamOneScoreVaue.AutoSize = true;
-            this.teamOneScoreVaue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teamOneScoreVaue.ForeColor = System.Drawing.Color.SteelBlue;
-            this.teamOneScoreVaue.Location = new System.Drawing.Point(508, 286);
-            this.teamOneScoreVaue.Name = "teamOneScoreVaue";
-            this.teamOneScoreVaue.Size = new System.Drawing.Size(75, 40);
-            this.teamOneScoreVaue.TabIndex = 9;
-            this.teamOneScoreVaue.Text = "       ";
-            this.teamOneScoreVaue.Click += new System.EventHandler(this.teamOneScoreVaue1_Click);
-            // 
-            // teamTwoScoreValue
-            // 
-            this.teamTwoScoreValue.AutoSize = true;
-            this.teamTwoScoreValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teamTwoScoreValue.ForeColor = System.Drawing.Color.SteelBlue;
-            this.teamTwoScoreValue.Location = new System.Drawing.Point(508, 423);
-            this.teamTwoScoreValue.Name = "teamTwoScoreValue";
-            this.teamTwoScoreValue.Size = new System.Drawing.Size(75, 40);
-            this.teamTwoScoreValue.TabIndex = 12;
-            this.teamTwoScoreValue.Text = "       ";
-            // 
             // teamTwoNameScore
             // 
             this.teamTwoNameScore.AutoSize = true;
@@ -191,18 +168,39 @@
             this.scoreButton.Text = "Score";
             this.scoreButton.UseVisualStyleBackColor = true;
             // 
-            // TournamentViewrForm
+            // teamOneScoreVaue
+            // 
+            this.teamOneScoreVaue.BackColor = System.Drawing.Color.White;
+            this.teamOneScoreVaue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teamOneScoreVaue.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.teamOneScoreVaue.Location = new System.Drawing.Point(503, 288);
+            this.teamOneScoreVaue.Name = "teamOneScoreVaue";
+            this.teamOneScoreVaue.Size = new System.Drawing.Size(86, 38);
+            this.teamOneScoreVaue.TabIndex = 30;
+            this.teamOneScoreVaue.TextChanged += new System.EventHandler(this.tournamentNameValue_TextChanged);
+            // 
+            // teamTwoScoreValue
+            // 
+            this.teamTwoScoreValue.BackColor = System.Drawing.Color.White;
+            this.teamTwoScoreValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teamTwoScoreValue.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.teamTwoScoreValue.Location = new System.Drawing.Point(503, 425);
+            this.teamTwoScoreValue.Name = "teamTwoScoreValue";
+            this.teamTwoScoreValue.Size = new System.Drawing.Size(86, 38);
+            this.teamTwoScoreValue.TabIndex = 31;
+            // 
+            // TournamentViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(775, 535);
+            this.Controls.Add(this.teamTwoScoreValue);
+            this.Controls.Add(this.teamOneScoreVaue);
             this.Controls.Add(this.scoreButton);
             this.Controls.Add(this.versus);
-            this.Controls.Add(this.teamTwoScoreValue);
             this.Controls.Add(this.teamTwoNameScore);
             this.Controls.Add(this.teamTwoName);
-            this.Controls.Add(this.teamOneScoreVaue);
             this.Controls.Add(this.teamOneScore);
             this.Controls.Add(this.matchupListBox);
             this.Controls.Add(this.teamOneName);
@@ -213,7 +211,7 @@
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "TournamentViewrForm";
+            this.Name = "TournamentViewerForm";
             this.Text = "TournamentViewr";
             this.Load += new System.EventHandler(this.TournamentViewrForm_Load);
             this.ResumeLayout(false);
@@ -231,11 +229,11 @@
         private Label teamOneName;
         private ListBox matchupListBox;
         private Label teamOneScore;
-        private Label teamOneScoreVaue;
-        private Label teamTwoScoreValue;
         private Label teamTwoNameScore;
         private Label teamTwoName;
         private Label versus;
         private Button scoreButton;
+        private TextBox teamOneScoreVaue;
+        private TextBox teamTwoScoreValue;
     }
 }

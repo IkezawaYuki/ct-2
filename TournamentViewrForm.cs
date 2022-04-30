@@ -1,8 +1,8 @@
 namespace TrackerUI
 {
-    public partial class TournamentViewrForm : Form
+    public partial class TournamentViewerForm : Form
     {
-        public TournamentViewrForm()
+        public TournamentViewerForm()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace TrackerUI
         }
 
         private void teamOneScoreVaue1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tournamentNameValue_TextChanged(object sender, EventArgs e)
         {
 
         }

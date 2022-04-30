@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.headerLabel = new System.Windows.Forms.Label();
-            this.tournamentNameValue = new System.Windows.Forms.Label();
             this.tournamentNameLabel = new System.Windows.Forms.Label();
             this.teamOneScoreVaue = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.prizeLabel = new System.Windows.Forms.Label();
             this.prizeListBox = new System.Windows.Forms.ListBox();
             this.createTournamentButton = new System.Windows.Forms.Button();
+            this.tournamentNameValue = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -55,18 +55,6 @@
             this.headerLabel.Size = new System.Drawing.Size(259, 38);
             this.headerLabel.TabIndex = 1;
             this.headerLabel.Text = "Create Tournament:";
-            // 
-            // tournamentNameValue
-            // 
-            this.tournamentNameValue.AutoSize = true;
-            this.tournamentNameValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tournamentNameValue.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tournamentNameValue.Location = new System.Drawing.Point(55, 141);
-            this.tournamentNameValue.Name = "tournamentNameValue";
-            this.tournamentNameValue.Size = new System.Drawing.Size(75, 40);
-            this.tournamentNameValue.TabIndex = 11;
-            this.tournamentNameValue.Text = "       ";
-            this.tournamentNameValue.Click += new System.EventHandler(this.tournamentNameValue_Click);
             // 
             // tournamentNameLabel
             // 
@@ -250,12 +238,23 @@
             this.createTournamentButton.UseVisualStyleBackColor = true;
             this.createTournamentButton.Click += new System.EventHandler(this.button2_Click);
             // 
+            // tournamentNameValue
+            // 
+            this.tournamentNameValue.BackColor = System.Drawing.Color.White;
+            this.tournamentNameValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tournamentNameValue.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tournamentNameValue.Location = new System.Drawing.Point(64, 134);
+            this.tournamentNameValue.Name = "tournamentNameValue";
+            this.tournamentNameValue.Size = new System.Drawing.Size(351, 38);
+            this.tournamentNameValue.TabIndex = 29;
+            // 
             // createTournamentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(941, 556);
+            this.Controls.Add(this.tournamentNameValue);
             this.Controls.Add(this.createTournamentButton);
             this.Controls.Add(this.deleteSelectedPrizeButton);
             this.Controls.Add(this.prizeLabel);
@@ -270,7 +269,6 @@
             this.Controls.Add(this.selectTeamLabel);
             this.Controls.Add(this.teamOneScoreVaue);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tournamentNameValue);
             this.Controls.Add(this.tournamentNameLabel);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -286,7 +284,6 @@
         #endregion
 
         private Label headerLabel;
-        private Label tournamentNameValue;
         private Label tournamentNameLabel;
         private Label teamOneScoreVaue;
         private Label label1;
@@ -302,5 +299,6 @@
         private Label prizeLabel;
         private ListBox prizeListBox;
         private Button createTournamentButton;
+        private TextBox tournamentNameValue;
     }
 }
