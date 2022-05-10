@@ -182,6 +182,11 @@
 
         }
 
+        private void CreatePrizeForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         private Label headerLabel;
