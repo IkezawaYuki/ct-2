@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
@@ -62,7 +63,16 @@ namespace TrackerUI
         {
             if (ValidateForm())
             {
+                PersonModel p = new PersonModel();
+                p.FirstName = firstNameVaue.Text;
+                p.LastName = lastNameLabel.Text;
+                p.EmailAddress = emailValue.Text;
+                p.CellphoneNumber = cellphoneValue.Text;
 
+            } 
+            else
+            {
+                MessageBox.Show("You need to fill in all of the fields");
             }
         }
     }
