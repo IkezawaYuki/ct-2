@@ -31,7 +31,7 @@
             this.teamNameLabel = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
             this.addMemberButton = new System.Windows.Forms.Button();
-            this.selectTeamDropdown = new System.Windows.Forms.ComboBox();
+            this.selectTeamMemberDropdown = new System.Windows.Forms.ComboBox();
             this.selectTeamMemberLabel = new System.Windows.Forms.Label();
             this.addNewMemberGroupBox = new System.Windows.Forms.GroupBox();
             this.cellphoneValue = new System.Windows.Forms.TextBox();
@@ -88,15 +88,15 @@
             this.addMemberButton.UseVisualStyleBackColor = true;
             this.addMemberButton.Click += new System.EventHandler(this.addMemberButton_Click);
             // 
-            // selectTeamDropdown
+            // selectTeamMemberDropdown
             // 
-            this.selectTeamDropdown.BackColor = System.Drawing.Color.White;
-            this.selectTeamDropdown.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.selectTeamDropdown.FormattingEnabled = true;
-            this.selectTeamDropdown.Location = new System.Drawing.Point(47, 198);
-            this.selectTeamDropdown.Name = "selectTeamDropdown";
-            this.selectTeamDropdown.Size = new System.Drawing.Size(351, 36);
-            this.selectTeamDropdown.TabIndex = 19;
+            this.selectTeamMemberDropdown.BackColor = System.Drawing.Color.White;
+            this.selectTeamMemberDropdown.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.selectTeamMemberDropdown.FormattingEnabled = true;
+            this.selectTeamMemberDropdown.Location = new System.Drawing.Point(47, 198);
+            this.selectTeamMemberDropdown.Name = "selectTeamMemberDropdown";
+            this.selectTeamMemberDropdown.Size = new System.Drawing.Size(351, 36);
+            this.selectTeamMemberDropdown.TabIndex = 19;
             // 
             // selectTeamMemberLabel
             // 
@@ -289,7 +289,7 @@
             this.Controls.Add(this.teamMembersListBox);
             this.Controls.Add(this.addNewMemberGroupBox);
             this.Controls.Add(this.addMemberButton);
-            this.Controls.Add(this.selectTeamDropdown);
+            this.Controls.Add(this.selectTeamMemberDropdown);
             this.Controls.Add(this.selectTeamMemberLabel);
             this.Controls.Add(this.teamNameLabel);
             this.Controls.Add(this.headerLabel);
@@ -307,7 +307,7 @@
         private Label teamNameLabel;
         private Label headerLabel;
         private Button addMemberButton;
-        private ComboBox selectTeamDropdown;
+        private ComboBox selectTeamMemberDropdown;
         private Label selectTeamMemberLabel;
         private GroupBox addNewMemberGroupBox;
         private Label firstNameLabel;

@@ -7,15 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
 using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
     public partial class CreateTeamForm : Form
     {
+        private List<PersonModel> availableTeamMembers = new List<PersonModel>();
+        private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
         public CreateTeamForm()
         {
             InitializeComponent();
+        }
+        private void CreateSampleData()
+        {
+            availableTeamMembers.Add(new PersonModel { FirstName = "Tim", LastName = "Corey" });
+
+        }
+        private void WireUpLists()
+        {
+            selectTeamMemberDropdown.DataSource = availableTeamMembers;
+            selectTeamMemberDropdown.DisplayMember = "FullName";
+
+            teamMembersListBox.DataSource = availableTeamMembers;
+            teamMembersListBox.DisplayMember = "FullName";
         }
 
         private void CreateTeamForm_Load(object sender, EventArgs e)
@@ -69,6 +85,12 @@ namespace TrackerUI
                 p.EmailAddress = emailValue.Text;
                 p.CellphoneNumber = cellphoneValue.Text;
 
+                GlobalConfig.Connection.CreatePerson(p);
+
+                firstNameVaue.Text = "";
+                lastNameLabel.Text = "";
+                emailValue.Text = "";
+                cellphoneValue.Text = "";
             } 
             else
             {
