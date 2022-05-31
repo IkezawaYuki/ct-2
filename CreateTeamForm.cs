@@ -19,19 +19,35 @@ namespace TrackerUI
         public CreateTeamForm()
         {
             InitializeComponent();
+            CreateSampleData();
+            WireUpLists();
+        }
+        private void LoadListData()
+        {
+            availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         }
         private void CreateSampleData()
         {
             availableTeamMembers.Add(new PersonModel { FirstName = "Tim", LastName = "Corey" });
+            availableTeamMembers.Add(new PersonModel { FirstName = "Sue", LastName = "Storm" });
+
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Jane", LastName = "Smith" });
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Bill", LastName = "Jones" });
 
         }
         private void WireUpLists()
         {
+            selectTeamMemberDropdown.DataSource = null;
+
             selectTeamMemberDropdown.DataSource = availableTeamMembers;
             selectTeamMemberDropdown.DisplayMember = "FullName";
 
+            teamMembersListBox.DataSource = null;
+
             teamMembersListBox.DataSource = availableTeamMembers;
             teamMembersListBox.DisplayMember = "FullName";
+
+            selectTeamMemberDropdown.Refresh();
         }
 
         private void CreateTeamForm_Load(object sender, EventArgs e)
@@ -46,7 +62,12 @@ namespace TrackerUI
 
         private void addMemberButton_Click(object sender, EventArgs e)
         {
+            PersonModel p = (PersonModel)selectTeamMemberDropdown.SelectedItem;
 
+            availableTeamMembers.Remove(p);
+            selectedTeamMembers.Add(p);
+
+            WireUpLists();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -96,6 +117,11 @@ namespace TrackerUI
             {
                 MessageBox.Show("You need to fill in all of the fields");
             }
+        }
+
+        private void deleteSelectedMemberButton_Click(object sender, EventArgs e)
+        {
+            PersonModel p = (PersonModel)teamMembersListBox.SelectedItem;
         }
     }
 }
