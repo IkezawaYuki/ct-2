@@ -118,6 +118,7 @@
             this.createNewTeamLink.TabIndex = 16;
             this.createNewTeamLink.TabStop = true;
             this.createNewTeamLink.Text = "create new";
+            this.createNewTeamLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createNewTeamLink_LinkClicked);
             // 
             // addTeamButton
             // 
@@ -248,7 +249,7 @@
             this.tournamentNameValue.Size = new System.Drawing.Size(351, 38);
             this.tournamentNameValue.TabIndex = 29;
             // 
-            // createTournamentForm
+            // CreateTournamentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,7 +274,7 @@
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "createTournamentForm";
+            this.Name = "CreateTournamentForm";
             this.Text = "CreateTournament";
             this.Load += new System.EventHandler(this.CreateTournamentForm_Load);
             this.ResumeLayout(false);

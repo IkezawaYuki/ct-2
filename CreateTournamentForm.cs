@@ -20,16 +20,19 @@ namespace TrackerUI
         public CreateTournamentForm()
         {
             InitializeComponent();
-            InitialzeLists();
+            WireUpLists();
         }
-        private void InitialzeLists()
+        private void WireUpLists()
         {
+            selectTeamDropdown.DataSource = null;
             selectTeamDropdown.DataSource = availableTeams;
             selectTeamDropdown.DisplayMember = "TeamName";
 
+            tournamentPlayersListBox.DataSource = null;
             tournamentPlayersListBox.DataSource = selectedPrizes;
             tournamentPlayersListBox.DisplayMember = "TeamName";
 
+            prizeListBox.DataSource = null;
             prizeListBox.DataSource = selectedPrizes;
             prizeListBox.DisplayMember = "";
         }
@@ -56,8 +59,15 @@ namespace TrackerUI
 
         private void scoreButton_Click(object sender, EventArgs e)
         {
-
+            TeamModel t = (TeamModel)selectTeamDropdown.SelectedItem;
+            if (t != null)
+            {
+                availableTeams.Remove(t);
+                selectedTeams.Add(t);
+                WireUpLists();
+            }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -66,6 +76,12 @@ namespace TrackerUI
 
         private void roundLabel_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void createNewTeamLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreatePrizeForm frm = new CreatePrizeForm();
 
         }
     }
