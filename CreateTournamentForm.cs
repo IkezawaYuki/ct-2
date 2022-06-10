@@ -81,8 +81,13 @@ namespace TrackerUI
 
         private void createNewTeamLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CreatePrizeForm frm = new CreatePrizeForm();
+            CreatePrizeForm frm = new CreatePrizeForm(this);
+            frm.Show();
+        }
 
+        public void PrizeComplete(PrizeModel model)
+        {
+            throw new NotImplementedException();
         }
     }
 }
