@@ -117,6 +117,17 @@ namespace TrackerUI
 
         private void deleteSelectedPrizeButton_Click(object sender, EventArgs e)
         {
+            PrizeModel p = (PrizeModel)prizeListBox.SelectedItem;
+            if (p != null)
+            {
+                selectedPrizes.Remove(p);
+
+                WireUpLists();
+            }
+        }
+
+        private void prizeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
