@@ -71,6 +71,22 @@ namespace TrackerUI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            decimal fee = 0;
+            bool feeAcceptable = decimal.TryParse("100", out fee);
+            if (!feeAcceptable)
+            {
+                MessageBox.Show("You need to enter a valid Entry Fee.",
+                    "Invalid Fee",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+            TournamentModel tm = new TournamentModel();
+            tm.TournamentName = tournamentNameValue.Text;
+            tm.EntryFee = decimal.Parse(tournamentNameValue.Text);
+
+            tm.Prizes = selectedPrizes;
+            tm.EnteredTeams = selectedTeams;
 
         }
 
